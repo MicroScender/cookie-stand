@@ -20,11 +20,15 @@ let Seattle ={
   // // },
   // // getCook: function(){
   // //   this.aveCookCust =`${randomCustCount()}`
-  // }  
+  // },
+  render: function(){
+    let 
+  }  
 };
 // Seattle.getMin();
 // Seattle.getMax();
 // Seattle.getCook();
+// Seattle.render();
 console.log(Seattle);
 
 let Tokyo ={
