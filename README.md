@@ -1,5 +1,15 @@
-# cookie-stand
-## List of necessities/desires from Pat
+# cookie-stand_wk2_201
+## Proj.info
+* worked on by 
+  * Me
+* tools
+  * https://gist.github.com/jxson/1784669
+  * https://gist.github.com/kipyegonmark/89fe62493f22d93705d917d634d8eeb2
+  * data
+  * data
+  * data
+
+### List of necessities/desires from Pat
 
 Pat needs help. 
 Salmon Cookies a "coffee-time confection" made into salmon shapes with a hint of fishness.
