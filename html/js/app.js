@@ -19,7 +19,7 @@ function storeData(name, minCust, maxCust, avgCook){
   this.min = minCust;
   this.max = maxCust;
   this.avg = avgCook;
-  this.cust =cust;
+  this.cust =[];
   this.total = 0;
   this.cookArray = [];
     fishyStores.push(this);
@@ -40,7 +40,50 @@ storeData.prototype.totalCook = function(){
       this.cookArray.push(cookies);
     }
 };
-storeData.prototype.render = function();
+storeData.prototype.render = function(){
   this.totalCook();
     let trElem= document.createElement('tr');
       tableElem.appendChild(trElem);
+    let thElem= document.createElement('th');
+      thElem.textContent= this.name;
+      trElem.appendChild(thElem);
+    for(let i = 0; i < hours.length; i++){
+      let tdElem = document.createElement('td');
+        tdElem.textContent = this.cookArray[i];
+        trElem.appendChild(tdElem);
+    }
+    let tdElem = document.createElement('td');
+      tdElem.textContent = this.total;
+      trElem.appendChild(tdElem);
+};
+
+function headRow(){
+  let trElem = document.createElement('tr');
+    tableElem.appendChild(trElem);
+  let thElem = document.createElement('th');
+    trElem.appendChild(thElem);
+  for(let i =0; i < hours.length; i++){
+    let th2Elem =document.createElement('th');
+      th2Elem.textContent =hours[i];
+      trElem.appendChild(th2Elem);
+  }
+  let th3Elem = document.createElement('th');
+    th3Elem.textContent = 'Total';
+    trElem.appendChild(th3Elem);
+}
+
+new storeData('Seattle', 23, 65, 6.3);
+new storeData('Tokyo', 3, 24, 1.2);
+new storeData('Dubai', 3, 24, 1.2);
+new storeData('Paris', 20, 38, 3.7);
+new storeData('Lima', 2, 16, 4.6);
+
+function rendStoreData(){
+  for(let i =0; i < fishyStores.length; i++){
+    fishyStores[i].render();
+  }
+}
+
+headRow();
+rendStoreData();
+
