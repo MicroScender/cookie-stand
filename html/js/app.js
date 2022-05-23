@@ -3,7 +3,7 @@
 let cookSales= document.getElementById('sales');
 let tableElem= document.createElement('table');
 cookSales.appendChild(tableElem);
-let hours =['6am', '7am', '8am', '9am', '10am', '11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+let hours =['6am', '7am', '8am', '9am', '10am', '11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm',];
 
 //borrowed from mdn docs
 function randomCustCount(min, max) {
@@ -56,7 +56,6 @@ storeData.prototype.render = function(){
       tdElem.textContent = this.total;
       trElem.appendChild(tdElem);
 };
-
 function rowHead(){
   let trElem = document.createElement('tr');
     tableElem.appendChild(trElem);
@@ -68,7 +67,7 @@ function rowHead(){
       trElem.appendChild(th2Elem);
   }
   let th3Elem = document.createElement('th');
-    th3Elem.textContent = 'Total';
+    th3Elem.textContent = 'Daily City Total';
     trElem.appendChild(th3Elem);
 }
 function rowFoot(){
@@ -76,9 +75,24 @@ function rowFoot(){
     tableElem.appendChild(ftElem);
   let finRow = document.createElement('tr');
     ftElem.appendChild(finRow);
-  let tdElem = document.createElement('td');
+  let tdElem = document.createElement('th');
     tdElem.textContent=('Total');
     finRow.appendChild(tdElem);
+  let finTotal = 0;
+  for (let i = 0; i <hours.length; i++){
+    let cookTotal = 0;
+    let j=0;
+    for (let j = 0; j < fishyStores.length; j++){
+      cookTotal += fishyStores[j].cookArray[i];
+      finTotal += fishyStores[j].cookArray[i];
+    }  
+  let colTotal =document.createElement('td')
+    colTotal.textContent = `${cookTotal}`;
+    finRow.appendChild(colTotal);
+  }
+  let finCookTotal = document.createElement('td');
+    finCookTotal.textContent= `${finTotal}`;   
+    finRow.appendChild(finCookTotal); 
 }
 new storeData('Seattle', 23, 65, 6.3);
 new storeData('Tokyo', 3, 24, 1.2);
