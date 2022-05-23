@@ -57,7 +57,7 @@ storeData.prototype.render = function(){
       trElem.appendChild(tdElem);
 };
 
-function headRow(){
+function rowHead(){
   let trElem = document.createElement('tr');
     tableElem.appendChild(trElem);
   let thElem = document.createElement('th');
@@ -71,7 +71,15 @@ function headRow(){
     th3Elem.textContent = 'Total';
     trElem.appendChild(th3Elem);
 }
-
+function rowFoot(){
+  let ftElem = document.createElement('tfoot');
+    tableElem.appendChild(ftElem);
+  let finRow = document.createElement('tr');
+    ftElem.appendChild(finRow);
+  let tdElem = document.createElement('td');
+    tdElem.textContent=('Total');
+    finRow.appendChild(tdElem);
+}
 new storeData('Seattle', 23, 65, 6.3);
 new storeData('Tokyo', 3, 24, 1.2);
 new storeData('Dubai', 3, 24, 1.2);
@@ -84,6 +92,7 @@ function rendStoreData(){
   }
 }
 
-headRow();
+rowHead();
 rendStoreData();
+rowFoot();
 
