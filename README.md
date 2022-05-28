@@ -29,6 +29,15 @@ Salmon Cookies a "coffee-time confection" made into salmon shapes with a hint of
 * build a application to calculate daily sales projection for each location on a page called sales.html
 * create a public page that is colorful, eye catching, readable, useful, informative in index.html
 
+## lab-8b
+* 7 images for the home page. *pics provided*<br>
+index.html will have:
+1. locations with addresses
+2. contact information
+3. necessities decided by me
+4. link to sales.html page
+  * include link to index.html on sales.html
+  
 ## Suggested Plan
 *create a wire frame for this*
 
