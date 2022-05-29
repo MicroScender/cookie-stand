@@ -1,104 +1,25 @@
 body {
-
-}
-
-header {
-
-}
-
-header h1{
-
-}
-
-nav {
-
-}
-
-.simple-highlight {
-
-}
-
-main {
-
-}
-
-#salmon {
-
-}
-
-#merch {
-
-}
-
-#merch ul{
-
-}
-
-#merch ul img {
-
-}
-
-#merch h2 {
- 
-}
-
-.side-by-side {
-
-}
-
-.side-by-side section {
+  background-color: aquamarine;
   
 }
 
-#locations {
+header {
+  border-color: blueviolet;
+  border: 5px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+  font-size: 50px;
+  text-align: center;
+  }
 
-}
-
-#locations h2 {
-
-}
-
-table *{
-
- 
-}
-
-table {
-
-}
-
-th {
-
-}
-
-td {
-
-}
-
-form {
-
-}
-
-form label {
-
-}
-
-button {
-
-}
-
-button {
-
-}
-
-#family {
-
-}
+  nav ul {
+    text-align: left;
+  }
 
 footer {
-
+  
 }
 
-#chinook {
- 
+footer img {
+  padding-left: 100px;
 }
