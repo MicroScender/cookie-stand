@@ -1,4 +1,25 @@
 body {
-  background-color: blue;
+  background-color: aquamarine;
+  
 }
 
+header {
+  border-color: blueviolet;
+  border: 5px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+  font-size: 50px;
+  text-align: center;
+  }
+
+  nav ul {
+    text-align: left;
+  }
+
+footer {
+  
+}
+
+footer img {
+  padding-left: 100px;
+}
